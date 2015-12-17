@@ -1,0 +1,12 @@
+<seelog type="sync">
+<outputs>
+    <custom name="rsyslog" formatid="syslog" data-net="tcp" data-addr="127.0.0.1:5514" data-tag="myrsyslog" />
+    <rollingfile formatid="syslog" type="date" filename="./log/test" archivetype="zip" datepattern="2006-01-02" />
+    <console formatid="syslog" />
+</outputs>
+<formats>
+    <format id="syslog" format="%File %Func %Line %LEV %Msg%n"/>
+</formats>
+</seelog>
+
+
